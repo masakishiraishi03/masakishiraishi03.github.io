@@ -165,18 +165,3 @@ footer {
     margin: 0 0.5rem;
     text-decoration: none;
 }
-
-/* responsive.css */
-@media (max-width: 768px) {
-    .menu {
-        display: none;  /* モバイルメニューは JavaScript で制御 */
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
