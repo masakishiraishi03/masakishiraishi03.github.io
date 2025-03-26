@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masaki Shiraishi - About Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <style>
+        /* CV専用のスタイル */
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .cv-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .cv-header p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        .cv-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .cv-contact span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+
+        .cv-section h2 {
+            color: var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .cv-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .cv-item-date {
+            color: #64748b;
+        }
+
+        .cv-item-subtitle {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            color: #475569;
+        }
+
+        .cv-item-content {
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category {
+            margin-bottom: 1rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background-color: #f1f5f9;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .certificates-list {
+            list-style-type: none;
+        }
+
+        .certificates-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .certificates-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .bio {
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .cv-item-header {
+                flex-direction: column;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Masaki Shiraishi</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>CV</h1>
+            </div>
+        </section>
+
+        <section class="cv-section-container">
+            <div class="cv-container">
+                <!-- CV ヘッダー -->
+                <div class="cv-header">
+                    <h1>Masaki Shiraishi</h1>
+                    <p>Quantum Algorithm and ML Engineer</p>
+                    <div class="cv-contact">
+                        <span>📍 Shinjuku-ku, Tokyo</span>
+                        <span>📧 shiraishimasaki.w@gmail.com</span>
+                        <span>🔗 github.com/masakishiraishi03</span>
+                    </div>
+                </div>
+
+                <!-- 自己紹介 -->
+                <div class="cv-section">
+                    <h2></h2>
+                    <p class="bio">
+                        I attended St.Viator Rakusei junior and senior high school. I then pursued higher education at Waseda University, specializing in quantum computing.
+                    </p>
+                </div>
+
+                <!-- 職務経歴 -->
+<!--                 <div class="cv-section">
+                    <h2>CV</h2>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div class="cv-item-title"></div>
+                            <div class="cv-item-date">2021年4月 - 現在</div>
+                        </div>
+                        <div class="cv-item-subtitle">株式会社〇〇</div>
+                        <div class="cv-item-content">
+                            <ul>
+                                <li>〇〇プロジェクトの主要開発者として、チームを率いて〇〇を実装</li>
+                                <li>〇〇の改善により、サービスのパフォーマンスを〇〇%向上</li>
+                                <li>新しい〇〇技術を導入し、開発効率を〇〇%改善</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div class="cv-item-title">〇〇エンジニア</div>
+                            <div class="cv-item-date">2018年7月 - 2021年3月</div>
+                        </div>
+                        <div class="cv-item-subtitle">〇〇株式会社</div>
+                        <div class="cv-item-content">
+                            <ul>
+                                <li>〇〇アプリケーションの開発チームに参加し、〇〇機能を担当</li>
+                                <li>〇〇の導入により、ユーザー満足度を〇〇%向上</li>
+                                <li>社内勉強会を主催し、〇〇技術の知識共有に貢献</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- 学歴 -->
+                <div class="cv-section">
+                    <h2>Educational background</h2>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div class="cv-item-title">Applied Physics</div>
+                            <div class="cv-item-date">2024/4/1 - Present</div>
+                        </div>
+                        <div class="cv-item-subtitle">Waseda University</div>
+                        <div class="cv-item-content">
+                            <p>Quantum computing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <div class="cv-item-title"></div>
+                            <div class="cv-item-date">2017/4/1 - 2023/3/31</div>
+                        </div>
+                        <div class="cv-item-subtitle">St.Viator Rakusei junior and senior high school</div>
+                        <div class="cv-item-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- スキル -->
+                <div class="cv-section">
+                    <h2>スキル</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Programming languages</h3>
+                            <div class="skill-list">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C++</span>
+                            </div>
+                        </div>
+                        
+<!--                         <div class="skill-category">
+                            <h3>SDK</h3>
+                            <div class="skill-list">
+                                <span class="skill-tag">CUDA-Q</span>
+                                <span class="skill-tag">QISKIT</span>
+                                <span clsss="skill-tag">PyTorch</span>
+                            </div>
+                        </div> -->
+                        
+                    </div>
+                </div>
+
+                <!-- 資格・認定 -->
+                <!-- 趣味・関心 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Masaki Shiraishi. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>            <!-- 他のSNSリンクも追加 -->
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
